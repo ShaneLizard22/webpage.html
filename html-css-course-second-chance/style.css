@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(sopranos.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: white;
+
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+    
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    font-family: Arial;
+    color: rgb(172, 4, 4);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+    
+}
+
+.text-box{
+
+    width: 90%;
+    color:rgb(172, 4, 4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+
+}
+
+.text-box p{
+    margin: 10px 0 40;
+    font-size: 40px;
+    color: rgb(172, 4, 4);
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(172, 4, 4);
+    border: 1px solid rgb(172, 4, 4);
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    border: 1px solid white;
+    background-color: white;
+    transition: 1s;
+}
+
+@media(max-width: 700px){
+    .text-box h1 {
+    font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: white;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+
+    }
+}
+
+.main {
+    width: 1170px;
+    margin: 100px auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-title h2  {
+    text-transform: capitalize;
+    font-size: 35px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.section-title h2:before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    background-color: brown;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.menus {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu-column {
+    width: 70%;
+}
+
+.menu-column h4 {
+    text-transform: capitalize;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 6px;
+    }
+
+    .menu-column h4:before {
+        content:'';
+        position: absolute;
+        width: 80px;
+        height: 2px;
+        background-color: brown;
+        bottom: 0;
+
+    }
+
+.single-menu {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    margin-top: 40px;
+}
+
+.single-menu img {
+    border-radius: 50%;
+    max-width: 110px;
+    border: 1px dashed #ddd;
+    padding: 3px;
+    margin-right: 15px;
+}
+
+.single-menu .menu-content h5 {
+    text-transform: capitalize;
+    font-size: 22px;
+    font-weight: 500;
+    border-bottom: 1px dashed #222;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.single-menu .menu-content h5 span {
+    color: tomato;
+    float: right;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.container{
+    max-width: 1170px;
+    margin:auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+
+}
+.footer{
+   background-color: black;
+   padding: 70px 0;
+   position: bottom;
+   bottom: 0;
+   width: 100%;
+   height: 300px;   /* Height of the footer */
+}
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    color: darkred;
+}
+.footer-col a{
+    color: white;
+    font-size: 17px;
+    text-transform:capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color:#bbbbbb;
+    margin: 5px;
+}
